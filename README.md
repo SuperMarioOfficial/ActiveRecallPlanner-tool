@@ -4,7 +4,7 @@ You can find [here](https://github.com/SuperMarioOfficial/how-to-study-more-effe
 
 ## How to use it
 ###  1 -> Download python3
-###  2 -> Edit the python file changing this to lines:
+###  2 -> Edit the python file changing these to lines:
 ```  
 subjects = 2
 weeks = 7
