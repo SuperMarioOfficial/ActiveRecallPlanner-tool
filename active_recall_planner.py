@@ -7,6 +7,8 @@ def create_event(name, date):
     e.name = name
     e.begin = date
     e.make_all_day()
+    e.alarms(name)
+    e.organizer.common_name('@SuperMarioSecOp')
     return e
 
 
