@@ -7,6 +7,7 @@ def create_event(name, date):
     e.name = name
     e.begin = date
     e.make_all_day()
+
     return e
 
 
@@ -16,7 +17,7 @@ def revision_block_plan(subject, block, date, delta):
     revision_three = date + timedelta(days=delta + 6)
     revision_four = date + timedelta(days=delta + 21)
 
-    print("Revision schedule Subject {subject} block {block}:\n"
+    print("Revision schedule Subject[{subject}] week[{block}]:\n"
           "Starting to study on {today}\n"
           "revision one -> {revision_one}\n"
           "revision two -> {revision_two}\n"
@@ -31,8 +32,8 @@ def revision_block_plan(subject, block, date, delta):
 
 def create_study_plan():
     from datetime import date
-    subjects = 2
-    weeks = 7
+    subjects = 1
+    weeks = 12
 
     date = date.today()
     with open('recall_calendar.ics', 'w') as file:
@@ -48,25 +49,25 @@ def create_study_plan():
                     revision_four = date + timedelta(days=block + subject + 21)
 
                     event0 = create_event(
-                        "s[{subject}]b[{block}] revision 0 -> {revision}".format(subject=subject, block=block,
+                        "Revision subject[{subject}] week[{block}] revision[0] date[{revision}]".format(subject=subject, block=block,
                                                                                     revision=start),
                         start)
 
                     event1 = create_event(
-                        "s[{subject}]b[{block}] revision 1 -> {revision}".format(subject=subject, block=block,
+                        "Revision subject[{subject}] week[{block}] revision[1] date[{revision}]".format(subject=subject, block=block,
                                                                                       revision=revision_one),
                         revision_one)
 
                     event2 = create_event(
-                        "s[{subject}]b[{block}] revision 2 -> {revision}".format(subject=subject, block=block,
+                        "Revision subject[{subject}] week[{block}] revision[2] date[{revision}]".format(subject=subject, block=block,
                                                                                       revision=revision_two),
                         revision_two)
                     event3 = create_event(
-                        "s[{subject}]b[{block}] revision 3 -> {revision}".format(subject=subject, block=block,
+                        "Revision subject[{subject}] week[{block}] revision[3] date[{revision}]".format(subject=subject, block=block,
                                                                                     revision=revision_three),
                         revision_three)
                     event4 = create_event(
-                        "s[{subject}]b[{block}] revision 4 -> {revision}".format(subject=subject, block=block,
+                        "Revision subject[{subject}] week[{block}] revision[4] date[{revision}]".format(subject=subject, block=block,
                                                                                     revision=revision_four),
                         revision_four)
 
@@ -84,25 +85,25 @@ def create_study_plan():
                     revision_four = date + timedelta(days=(6 * block) + subject + 21)
 
                     event0 = create_event(
-                        "s[{subject}]b[{block}] revision 0 -> {revision}".format(subject=subject, block=block,
+                        "Revision subject[{subject}] week[{block}] revision[0] date[{revision}]".format(subject=subject, block=block,
                                                                                  revision=start),
                         start)
 
                     event1 = create_event(
-                        "s[{subject}]b[{block}] revision 1 -> {revision}".format(subject=subject, block=block,
+                        "Revision subject[{subject}] week[{block}] revision[1] date[{revision}]".format(subject=subject, block=block,
                                                                                  revision=revision_one),
                         revision_one)
 
                     event2 = create_event(
-                        "s[{subject}]b[{block}] revision 2 -> {revision}".format(subject=subject, block=block,
+                        "Revision subject[{subject}] week[{block}] revision[2] date[{revision}]".format(subject=subject, block=block,
                                                                                  revision=revision_two),
                         revision_two)
                     event3 = create_event(
-                        "s[{subject}]b[{block}] revision 3 -> {revision}".format(subject=subject, block=block,
+                        "Revision subject[{subject}] week[{block}] revision[3] date[{revision}]".format(subject=subject, block=block,
                                                                                  revision=revision_three),
                         revision_three)
                     event4 = create_event(
-                        "s[{subject}]b[{block}] revision 4 -> {revision}".format(subject=subject, block=block,
+                        "Revision subject[{subject}] week[{block}] revision[4] date[{revision}]".format(subject=subject, block=block,
                                                                                  revision=revision_four),
                         revision_four)
 
